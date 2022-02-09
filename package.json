@@ -4,6 +4,7 @@
   "description": "**NB: Please do not fork this repository, to avoid your solution being visible from this repository's GitHub page. Please clone this repository and submit your solution as a separate repository.**",
   "main": "index.js",
   "scripts": {
+    "start": "node listen.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
