@@ -19,7 +19,8 @@
   },
   "homepage": "https://github.com/PensionBee/static-content-challenge#readme",
   "dependencies": {
-    "express": "^4.17.2"
+    "express": "^4.17.2",
+    "marked": "^4.0.12"
   },
   "devDependencies": {
     "eslint": "^8.9.0",
