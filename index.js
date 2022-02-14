@@ -7,6 +7,8 @@ const fileOptions = { encoding: 'utf-8', };
 
 const app = express();
 
+app.use(express.static('public'));
+
 // The size of the task made proper routing and attempting MVC feel silly.
 app.get('/*', (req, res) => {
 
