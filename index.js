@@ -5,14 +5,19 @@ const Mustache = require('mustache');
 
 const app = express();
 
+const fileOptions = { encoding: 'utf-8', };
+
 app.get('/*', (req, res) => {
 
-	const mD = readFile(`./content${req.url}/index.md`, { encoding: 'utf-8', });
-	const template = readFile('./template.html', { encoding: 'utf-8', });
-	const allFiles = Promise.all([mD, template,]);
+	const markDownFile = readFile(`./content${req.url}/index.md`, fileOptions);
+	const templateFile = readFile('./template.html', fileOptions);
+	const openAllFiles = Promise.all([markDownFile, templateFile,]);
 
-	allFiles.then((data) => {
-		res.send(Mustache.render(data[1], { content: marked.parse(data[0]), }));
+	openAllFiles.then(([markDown, template,]) => {
+
+		const content  = { content: marked.parse(markDown), };
+
+		res.send(Mustache.render(template, content));
 
 	})
 		.catch((err) => {
