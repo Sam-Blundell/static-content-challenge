@@ -7,6 +7,7 @@ const fileOptions = { encoding: 'utf-8', };
 
 const app = express();
 
+// The size of the task made proper routing and attempting MVC feel silly.
 app.get('/*', (req, res) => {
 
 	const markDownFile = readFile(`./content${req.url}/index.md`, fileOptions);
