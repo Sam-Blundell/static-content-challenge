@@ -21,8 +21,7 @@ app.get('/*', (req, res) => {
 
 	})
 		.catch((err) => {
-			res.status(404).send('404');
-			console.log(err);
+			res.status(404).send(`404 No such filepath: ${err.path}`);
 		});
 });
 
