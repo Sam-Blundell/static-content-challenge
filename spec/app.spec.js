@@ -7,17 +7,28 @@ const viewsDirectory = 'content';
 
 const validEndpoints = getValidEndpoints(viewsDirectory);
 
+const invalidEndpoint = '/CyGbQXdAOADRvJwuailV';
+
 describe('CMS endpoint testing:', () => {
 	describe('Valid endpoint testing:', () => {
-		for (let endPoint of validEndpoints) {
-			it(`GET:200 sends a get request to the ${endPoint} url`, () => {
+		for (const url of validEndpoints) {
+			it(`GET:200 respond with status 200 at ${url} endpoint`, () => {
 				return request(app)
-					.get(endPoint)
-					.expect(200)
-					.then(response => {
-						console.log(response.text);
-					});
+					.get(url)
+					.expect(200);
 			});
 		}
+	});
+	describe('Invalid endpoint testing', () => {
+		it('STATUS:404 respond with 404 when folder doesn\'t exist', () => {
+			return request(app)
+				.get(invalidEndpoint)
+				.expect(404);
+		});
+		it('STATUS:404 respond with 404 when endpoint is missing', () => {
+			return request(app)
+				.get('')
+				.expect(404);
+		});
 	});
 });
