@@ -3,9 +3,9 @@ const { readFile, } = require('fs/promises');
 const { marked, } = require('marked');
 const Mustache = require('mustache');
 
-const app = express();
-
 const fileOptions = { encoding: 'utf-8', };
+
+const app = express();
 
 app.get('/*', (req, res) => {
 
