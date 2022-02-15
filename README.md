@@ -6,7 +6,7 @@ This project is a Node.js application that maps content files in a directory str
 The content files are written in markdown and are converted to HTML and embedded within a template HTML file before being served.
 A user can automatically create new endpoints simply by adding new markdown files to the content directory structure.
 
-### Filesystem and url endpoint examples:
+## Filesystem and url endpoint examples:
     .
     ├── ...
     ├── content
@@ -23,11 +23,17 @@ A user can automatically create new endpoints simply by adding new markdown file
     │   └── ...
     └── ....
 
-### setup
-To get started clone this repo to your machine
-Navigate to the repo directory and initialise the package manager with the command ```npm init -y```
-Install listed dependencies with the command ```npm i```
-Run the application with the command ```npm start```
+## Deployed example:
+There is a live version of this application hosted on Heroku that includes the default endpoints listed in the example above.\
+https://static-content-challenge.herokuapp.com/about-page\
+https://static-content-challenge.herokuapp.com/blog/june/company-update\
+https://static-content-challenge.herokuapp.com/jobs\
+https://static-content-challenge.herokuapp.com/valves\
+
+### Setup
+To get started clone this repository to your machine and navigate to the repository directory.\
+Install listed dependencies with the command ```npm i```\
+Run the application with the command ```npm start```\
 
 Dependencies:
 * express v4.17.2
@@ -36,12 +42,13 @@ Dependencies:
 
 ## Testing
 
-Once the setup is completed the tests can be run with ```npm test```
-
-Required testing dependencies:
-* chai  v4.3.6
-* mocha v9.2.0
-* supertest v6.2.2
+Once the setup is completed the tests can be run with ```npm test```.
 
 The tests do not depend on any existing content directory structure and will run a variable number of tests depending on the number of markdown files in the content folder.
 The test currently cover checking for appropriate status codes and content for all valid endpoints and appropriate status codes in the event of an invalid endpoint.
+
+
+### Testing dependencies:
+* chai  v4.3.6
+* mocha v9.2.0
+* supertest v6.2.2
