@@ -1,3 +1,4 @@
+
 # Static Content challenge
 
 **MVP for simple content management system**
@@ -7,6 +8,7 @@ The content files are written in markdown and are converted to HTML and embedded
 A user can automatically create new endpoints simply by adding new markdown files to the content directory structure.
 
 ## Filesystem and url endpoint examples:
+
     .
     ├── ...
     ├── content
@@ -24,16 +26,20 @@ A user can automatically create new endpoints simply by adding new markdown file
     └── ....
 
 ## Deployed example:
-There is a live version of this application hosted on Heroku that includes the default endpoints listed in the example above.\
-https://static-content-challenge.herokuapp.com/about-page\
-https://static-content-challenge.herokuapp.com/blog/june/company-update\
-https://static-content-challenge.herokuapp.com/jobs\
-https://static-content-challenge.herokuapp.com/valves\
+
+There is a live version of this application hosted on Heroku that includes the default endpoints listed in the example above.  
+
+**Links:**  
+[About page](https://static-content-challenge.herokuapp.com/about-page)  
+[Company update page](https://static-content-challenge.herokuapp.com/blog/june/company-update)  
+[Jobs page](https://static-content-challenge.herokuapp.com/jobs)  
+[Valves page](https://static-content-challenge.herokuapp.com/valves)  
 
 ### Setup
-To get started clone this repository to your machine and navigate to the repository directory.\
-Install listed dependencies with the command ```npm i```\
-Run the application with the command ```npm start```\
+
+To get started clone this repository to your machine and navigate to the repository directory.  
+Install listed dependencies with the command ```npm i```  
+Run the application with the command ```npm start```  
 
 Dependencies:
 * express v4.17.2
@@ -49,6 +55,7 @@ The test currently cover checking for appropriate status codes and content for a
 
 
 ### Testing dependencies:
+
 * chai  v4.3.6
 * mocha v9.2.0
 * supertest v6.2.2
