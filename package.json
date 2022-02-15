@@ -4,7 +4,8 @@
   "description": "**NB: Please do not fork this repository, to avoid your solution being visible from this repository's GitHub page. Please clone this repository and submit your solution as a separate repository.**",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon listen.js",
+    "start": "node listen.js",
+    "start-dev": "nodemon listen.js",
     "test": "mocha spec"
   },
   "repository": {
