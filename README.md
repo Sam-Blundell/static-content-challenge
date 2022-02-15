@@ -37,6 +37,11 @@ There is a live version of this application hosted on Heroku that includes the d
 
 ### Setup
 
+Node is required to setup and run this application.  
+It was built on node v16.14.0 but should work with previous versions too as long as they're relatively recent.  
+You can check your node version with  
+```node -v```.  
+
 To get started clone this repository to your machine and navigate to the repository directory.  
 Install listed dependencies with the command ```npm i```  
 Run the application with the command ```npm start```  
