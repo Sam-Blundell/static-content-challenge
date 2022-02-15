@@ -51,7 +51,7 @@ Dependencies:
 Once the setup is completed the tests can be run with ```npm test```.
 
 The tests do not depend on any existing content directory structure and will run a variable number of tests depending on the number of markdown files in the content folder.
-The test currently cover checking for appropriate status codes and content for all valid endpoints and appropriate status codes in the event of an invalid endpoint.
+The tests currently cover checking for appropriate status codes and content for all valid endpoints as well as appropriate status codes in the event of an invalid endpoint.
 
 
 ### Testing dependencies:
